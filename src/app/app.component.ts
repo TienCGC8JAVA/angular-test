@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-test';
+  title = 'Chãu Chãu';
+  display: boolean;
+
+  constructor() {
+    this.display = true;
+  }
+
+  toggle() {
+    this.display = !this.display;
+  }
 }
